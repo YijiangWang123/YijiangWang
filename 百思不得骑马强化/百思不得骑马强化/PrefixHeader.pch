@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  百思不得骑马强化
+//
+//  Created by YJW on 16/10/12.
+//  Copyright © 2016年 yijiang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+YJWExtension.h"
+
+#endif /* PrefixHeader_pch */
