@@ -11,4 +11,10 @@
 
 #import "UIView+YJWExtension.h"
 
+#ifdef DEBUG
+#define YJWFunc NSLog(@"%s",__func__)
+#else 
+#define YJWLog(...)
+#endif
+
 #endif /* PrefixHeader_pch */
