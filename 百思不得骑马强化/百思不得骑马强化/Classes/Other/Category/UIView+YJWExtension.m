@@ -10,58 +10,108 @@
 
 @implementation UIView (YJWExtension)
 
--(void)setWidth:(CGFloat)width{
+/***  yjw_x  ***/
+-(void)setYjw_x:(CGFloat)yjw_x
+{
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.origin.x = yjw_x;
     self.frame = frame;
 }
--(CGFloat)width{
-    return self.frame.size.width;
-}
-
--(void)setHeight:(CGFloat)height{
-    CGRect frame = self.frame;
-    frame.size.height = height;
-    self.frame = frame;
-}
--(CGFloat)height{
-    return self.frame.size.height;
-}
-
--(void)setX:(CGFloat)x{
-    CGRect frame = self.frame;
-    frame.origin.x = x;
-    self.frame = frame;
-}
--(CGFloat)x{
+-(CGFloat)yjw_x
+{
     return self.frame.origin.x;
 }
 
--(void)setY:(CGFloat)y{
+/***  yjw_y  ***/
+-(void)setYjw_y:(CGFloat)yjw_y
+{
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = yjw_y;
     self.frame = frame;
 }
--(CGFloat)y{
-    return self.frame.origin.y;
+-(CGFloat)yjw_y
+{
+    return  self.frame.origin.y;
 }
 
--(CGFloat)centerX{
+/***  yjw_width  ***/
+-(void)setYjw_width:(CGFloat)yjw_width
+{
+    CGRect frame = self.frame;
+    frame.size.width = yjw_width;
+    self.frame = frame;
+}
+-(CGFloat)yjw_width
+{
+    return self.frame.size.width;
+}
+
+/***  yjw_height  ***/
+-(void)setYjw_height:(CGFloat)yjw_height
+{
+    CGRect frame = self.frame;
+    frame.size.height = yjw_height;
+    self.frame = frame;
+}
+-(CGFloat)yjw_height
+{
+    return self.frame.size.height;
+}
+
+/***  yjw_size  ***/
+-(void)setYjw_size:(CGSize)yjw_size
+{
+    CGRect frame = self.frame;
+    frame.size = yjw_size;
+    self.frame = frame;
+}
+-(CGSize)yjw_size
+{
+    return self.frame.size;
+}
+
+/***  yjw_centerX  ***/
+-(void)setYjw_centerX:(CGFloat)yjw_centerX
+{
+    CGPoint point = self.center;
+    point.x = yjw_centerX;
+    self.center = point;
+}
+-(CGFloat)yjw_centerX
+{
     return self.center.x;
 }
--(void)setCenterX:(CGFloat)centerX{
-    CGPoint center = self.center;
-    center.x = centerX;
-    self.center = center;
-}
 
--(CGFloat)centerY{
+/***  yjw_centerY  ***/
+-(void)setYjw_centerY:(CGFloat)yjw_centerY
+{
+    CGPoint point = self.center;
+    point.y = yjw_centerY;
+    self.center = point;
+}
+-(CGFloat)yjw_centerY
+{
     return self.center.y;
 }
--(void)setCenterY:(CGFloat)centerY{
-    CGPoint center = self.center;
-    center.y = centerY;
-    self.center = center;
+
+/***  yjw_right  ***/
+-(void)setYjw_right:(CGFloat)yjw_right
+{
+    self.yjw_x = yjw_right - self.yjw_width;
+}
+-(CGFloat)yjw_right
+{
+    return self.yjw_x + self.yjw_width;
+}
+
+/***  yjw_buttom  ***/
+-(void)setYjw_bottom:(CGFloat)yjw_bottom
+{
+    self.yjw_x = yjw_bottom - self.yjw_width;
+}
+-(CGFloat)yjw_bottom
+{
+    return CGRectGetMaxY(self.frame);
 }
 
 @end

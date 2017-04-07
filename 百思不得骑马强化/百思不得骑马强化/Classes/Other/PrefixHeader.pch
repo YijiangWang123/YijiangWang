@@ -9,12 +9,40 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "UIView+YJWExtension.h"
+#ifdef __OBJC__
 
+#import "YJWLoginRegisterViewController.h"
+
+#import "UIView+YJWExtension.h"
+#import "UIBarButtonItem+YJWExtension.h"
+#import "YJWConst.h"
+#import "NSString+YJWExtension.h"
+
+#import "YJWHeader.h"
+#import "YJWFooter.h"
+
+#import "NSCalendar+YJWExtension.h"
+#import "NSDate+YJWExtension.h"
+
+/*** 日志 ***/
 #ifdef DEBUG
-#define YJWFunc NSLog(@"%s",__func__)
+#define YJWLog(...) NSLog(__VA_ARGS__)
+#define YJWFunc YJWLog(@"%s",__func__)
 #else 
 #define YJWLog(...)
+#define YJWFunc YJWLog(@"%s",__func__)
+#endif
+
+
+/*** 定义颜色 ***/
+#define YJWColorA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define YJWColor(r,g,b) YJWColorA(r,g,b,1)
+#define YJWRandomColor YJWColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+//背景颜色
+#define YJWGrayColor(r) [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:1]
+#define YJWCommonBackGroundColor YJWGrayColor(208)
+
+
 #endif
 
 #endif /* PrefixHeader_pch */

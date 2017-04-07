@@ -16,7 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = YJWCommonBackGroundColor;
+    
+    /***  标题视图  ***/
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"main"]];
+    
+    /***  左边按钮  ***/
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_coin_icon" highlightedImage:@"nav_coin_icon_click" target:self action:@selector(newTagClick)];
+    
+    YJWFunc;
+}
+
+/***  点击左侧按钮  ***/
+-(void)newTagClick
+{
+    YJWFunc;
 }
 
 - (void)didReceiveMemoryWarning {

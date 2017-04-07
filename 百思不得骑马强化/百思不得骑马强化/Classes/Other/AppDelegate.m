@@ -19,11 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //创建窗口控制器
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    
+    //设置窗口的根控制器
     self.window.rootViewController = [[YJWTabBarController alloc] init];
-    
+    //使窗口可见
     [self.window makeKeyAndVisible];
     
     return YES;

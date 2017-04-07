@@ -10,11 +10,23 @@
 
 @interface UIView (YJWExtension)
 
-@property(nonatomic,assign)CGFloat width;
-@property(nonatomic,assign)CGFloat height;
-@property(nonatomic,assign)CGFloat x;
-@property(nonatomic,assign)CGFloat y;
-@property(nonatomic,assign)CGFloat centerX;
-@property(nonatomic,assign)CGFloat centerY;
+/** 宽   */
+@property(nonatomic,assign) CGFloat yjw_width;
+/** 高   */
+@property(nonatomic,assign) CGFloat yjw_height;
+/** x   */
+@property(nonatomic,assign) CGFloat yjw_x;
+/** y   */
+@property(nonatomic,assign) CGFloat yjw_y;
+/** 尺寸   */
+@property(nonatomic,assign) CGSize yjw_size;
+/** 中心x   */
+@property(nonatomic,assign) CGFloat yjw_centerX;
+/** 中心y   */
+@property(nonatomic,assign) CGFloat yjw_centerY;
+/** 最右边   */
+@property(nonatomic,assign) CGFloat yjw_right;
+/** 最下边   */
+@property(nonatomic,assign) CGFloat yjw_bottom;
 
 @end

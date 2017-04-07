@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YJWMeViewController : UIViewController
+@interface YJWMeViewController : UITableViewController
 
 @end
