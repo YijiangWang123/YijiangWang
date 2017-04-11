@@ -32,6 +32,10 @@
     [_audioImageV sd_setImageWithURL:[NSURL URLWithString:topic.image0]];
     _playcountLabel.text = [NSString stringWithFormat:@"%@次播放",topic.playcount];
     
+    //设置时长
+    NSInteger min = topic.voicetime / 60;
+    NSInteger sec = topic.voicetime % 60;
+    _voicetimeLabel.text = [NSString stringWithFormat:@"%02ld:%02ld",min,sec];
 }
 
 @end

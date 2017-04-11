@@ -102,6 +102,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdx-FQ-ZO7" userLabel="底部工具条">
                         <rect key="frame" x="0.0" y="164" width="320" height="35"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="ELE-Ea-WpA" userLabel="cell分割线">
+                                <rect key="frame" x="0.0" y="0.0" width="319" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="549-PR-48s"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HL2-dm-BOX">
                                 <rect key="frame" x="0.0" y="0.0" width="79.5" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -146,6 +152,7 @@
                             <constraint firstItem="B0E-J5-m6d" firstAttribute="width" secondItem="HL2-dm-BOX" secondAttribute="width" id="5FU-Y0-U7n"/>
                             <constraint firstItem="HL2-dm-BOX" firstAttribute="top" secondItem="cdx-FQ-ZO7" secondAttribute="top" id="5d4-a5-aeM"/>
                             <constraint firstItem="B0E-J5-m6d" firstAttribute="leading" secondItem="RSs-iX-Kl8" secondAttribute="trailing" id="7OF-je-mIJ"/>
+                            <constraint firstItem="ELE-Ea-WpA" firstAttribute="leading" secondItem="cdx-FQ-ZO7" secondAttribute="leading" id="7PA-Gu-xab"/>
                             <constraint firstItem="Kcd-sK-U9Q" firstAttribute="leading" secondItem="HL2-dm-BOX" secondAttribute="trailing" id="7V5-vl-gzs"/>
                             <constraint firstItem="2dd-CW-Upg" firstAttribute="top" secondItem="cdx-FQ-ZO7" secondAttribute="top" id="80X-Xd-fJR"/>
                             <constraint firstItem="6sl-uj-8tu" firstAttribute="leading" secondItem="B0E-J5-m6d" secondAttribute="trailing" id="BI6-wM-pFG"/>
@@ -156,6 +163,7 @@
                             <constraint firstItem="6sl-uj-8tu" firstAttribute="top" secondItem="cdx-FQ-ZO7" secondAttribute="top" id="Ib0-KX-Hlc"/>
                             <constraint firstAttribute="bottom" secondItem="2dd-CW-Upg" secondAttribute="bottom" id="Ivx-Lg-KNP"/>
                             <constraint firstItem="2dd-CW-Upg" firstAttribute="width" secondItem="HL2-dm-BOX" secondAttribute="width" id="MQ5-dx-enX"/>
+                            <constraint firstAttribute="trailing" secondItem="ELE-Ea-WpA" secondAttribute="trailing" constant="1" id="Oj8-Rm-lxC"/>
                             <constraint firstAttribute="bottom" secondItem="HL2-dm-BOX" secondAttribute="bottom" id="Pyv-bI-3Bs"/>
                             <constraint firstItem="2dd-CW-Upg" firstAttribute="leading" secondItem="6sl-uj-8tu" secondAttribute="trailing" id="Qd5-fC-DMW"/>
                             <constraint firstAttribute="height" constant="35" id="WQO-wJ-aI1"/>
@@ -164,6 +172,7 @@
                             <constraint firstAttribute="bottom" secondItem="RSs-iX-Kl8" secondAttribute="bottom" id="Y3K-lX-Fb7"/>
                             <constraint firstItem="RSs-iX-Kl8" firstAttribute="leading" secondItem="nFR-1J-Yes" secondAttribute="trailing" id="cGB-Ci-L8B"/>
                             <constraint firstAttribute="bottom" secondItem="6sl-uj-8tu" secondAttribute="bottom" id="dD9-cJ-J9h"/>
+                            <constraint firstItem="ELE-Ea-WpA" firstAttribute="top" secondItem="cdx-FQ-ZO7" secondAttribute="top" id="gXj-br-dcO"/>
                             <constraint firstItem="nFR-1J-Yes" firstAttribute="top" secondItem="cdx-FQ-ZO7" secondAttribute="top" id="kvf-xd-2na"/>
                             <constraint firstItem="nFR-1J-Yes" firstAttribute="leading" secondItem="Kcd-sK-U9Q" secondAttribute="trailing" id="mgw-kH-sbJ"/>
                             <constraint firstAttribute="bottom" secondItem="nFR-1J-Yes" secondAttribute="bottom" id="oCT-fW-6Va"/>
@@ -203,6 +212,7 @@
     </objects>
     <resources>
         <image name="cell-button-line" width="1" height="29"/>
+        <image name="cell-content-line" width="299" height="1"/>
         <image name="mainCellCai" width="20" height="20"/>
         <image name="mainCellComment" width="20" height="20"/>
         <image name="mainCellDing" width="20" height="20"/>

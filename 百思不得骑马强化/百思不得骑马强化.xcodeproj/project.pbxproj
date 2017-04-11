@@ -15,6 +15,7 @@
 		613E1FD01E9B93D30068AEA9 /* YJWAudioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613E1FCF1E9B93D30068AEA9 /* YJWAudioView.xib */; };
 		613E1FD21E9B93DE0068AEA9 /* YJWPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613E1FD11E9B93DE0068AEA9 /* YJWPictureView.xib */; };
 		613E1FD41E9B93EC0068AEA9 /* YJWVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613E1FD31E9B93EC0068AEA9 /* YJWVideoView.xib */; };
+		614402451E9CF4D900696DB3 /* YJWTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614402441E9CF4D900696DB3 /* YJWTopicViewController.m */; };
 		616625341E7EBE91005460A8 /* YJWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 616625331E7EBE91005460A8 /* YJWConst.m */; };
 		616625371E7EC4B4005460A8 /* YJWMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 616625361E7EC4B4005460A8 /* YJWMeCell.m */; };
 		6166253A1E7F856A005460A8 /* YJWFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 616625391E7F856A005460A8 /* YJWFooterView.m */; };
@@ -98,6 +99,8 @@
 		613E1FCF1E9B93D30068AEA9 /* YJWAudioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJWAudioView.xib; sourceTree = "<group>"; };
 		613E1FD11E9B93DE0068AEA9 /* YJWPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJWPictureView.xib; sourceTree = "<group>"; };
 		613E1FD31E9B93EC0068AEA9 /* YJWVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJWVideoView.xib; sourceTree = "<group>"; };
+		614402431E9CF4D900696DB3 /* YJWTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWTopicViewController.h; sourceTree = "<group>"; };
+		614402441E9CF4D900696DB3 /* YJWTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWTopicViewController.m; sourceTree = "<group>"; };
 		616625321E7EBE91005460A8 /* YJWConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWConst.h; sourceTree = "<group>"; };
 		616625331E7EBE91005460A8 /* YJWConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWConst.m; sourceTree = "<group>"; };
 		616625351E7EC4B4005460A8 /* YJWMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWMeCell.h; sourceTree = "<group>"; };
@@ -325,6 +328,8 @@
 				61DB39411E839001005F272F /* YJWGameController.m */,
 				61DB39431E839011005F272F /* YJWNetHotController.h */,
 				61DB39441E839011005F272F /* YJWNetHotController.m */,
+				614402431E9CF4D900696DB3 /* YJWTopicViewController.h */,
+				614402441E9CF4D900696DB3 /* YJWTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -802,6 +807,7 @@
 				613E1FCE1E9B93C70068AEA9 /* YJWVideoView.m in Sources */,
 				61BE37101DE83DF2000758C7 /* UIView+YJWExtension.m in Sources */,
 				613E1FC81E9B927A0068AEA9 /* YJWAudioView.m in Sources */,
+				614402451E9CF4D900696DB3 /* YJWTopicViewController.m in Sources */,
 				616625341E7EBE91005460A8 /* YJWConst.m in Sources */,
 				6166253A1E7F856A005460A8 /* YJWFooterView.m in Sources */,
 				61BE370E1DE83DF2000758C7 /* YJWNewViewController.m in Sources */,

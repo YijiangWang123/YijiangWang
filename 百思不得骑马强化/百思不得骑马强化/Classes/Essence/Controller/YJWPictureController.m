@@ -14,36 +14,9 @@
 
 @implementation YJWPictureController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    YJWFunc;
-    self.tableView.backgroundColor = YJWRandomColor;
+-(YJWTopicType)type
+{
+    return YJWTopicTypeImage;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *pictureID = @"picture";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:pictureID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:pictureID];
-    }
-
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%@--%zd",[self class],indexPath.row];
-    
-    return cell;
-}
 @end

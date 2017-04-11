@@ -77,7 +77,7 @@ static NSCalendar *calendar_;
     CGFloat textWidth = [UIScreen mainScreen].bounds.size.width - 2 * YJWMargin;
     CGSize textSize = CGSizeMake(textWidth, MAXFLOAT);
     CGFloat textHeight = [_text boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size.height;
-    _cellHeight += (textHeight + 27);
+    _cellHeight += (textHeight + 34);
     
     //3.如果不是段子，就需要加入其它控件
     if (_type != YJWTopicTypeWord) {
@@ -91,7 +91,7 @@ static NSCalendar *calendar_;
         
         self.contentF = CGRectMake(YJWMargin, _cellHeight, textWidth, contentHeight);
         
-        _cellHeight += contentHeight + YJWMargin;
+        _cellHeight += contentHeight + YJWMargin * 2;
     }
     
     //4.热评

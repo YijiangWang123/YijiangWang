@@ -94,7 +94,7 @@
     titleView.showsHorizontalScrollIndicator = NO;
 
     /***  添加标题按钮  ***/
-    NSArray *titles = @[@"推荐",@"视频",@"图片",@"段子",@"排行",@"社会",@"美女",@"游戏",@"网红"];
+    NSArray *titles = @[@"推荐",@"视频",@"图片",@"段子",@"声音",@"社会",@"美女",@"游戏",@"网红"];
     NSUInteger titleCount = titles.count;
     CGFloat btnW = self.view.yjw_width / 5;
     CGFloat btnH = titleView.yjw_height;

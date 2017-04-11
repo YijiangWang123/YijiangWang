@@ -14,40 +14,10 @@
 
 @implementation YJWVideoController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    YJWFunc;
-    self.tableView.backgroundColor = YJWRandomColor;
-    
-    /***  设置内边距和初始化时内容偏移量  ***/
-    self.tableView.contentInset = UIEdgeInsetsMake(99, 0, 49, 0);
-    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-
+-(YJWTopicType)type
+{
+    return YJWTopicTypeVideo;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-#pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *videoID = @"video";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:videoID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:videoID];
-    }
-
-    cell.textLabel.text = [NSString stringWithFormat:@"%@--%zd",[self class],indexPath.row];
-    
-    return cell;
-}
 @end

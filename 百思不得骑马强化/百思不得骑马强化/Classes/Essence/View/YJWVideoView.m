@@ -31,7 +31,11 @@
     _topic = topic;
     [_videoImageV sd_setImageWithURL:[NSURL URLWithString:topic.image0]];
     _playcountLabel.text = [NSString stringWithFormat:@"%@次播放",topic.playcount];
-    _videotimeLabel.text = topic.videotime;
+    
+    //设置时长
+    NSInteger min = topic.videotime / 60;
+    NSInteger sec = topic.videotime % 60;
+    _videotimeLabel.text = [NSString stringWithFormat:@"%02ld:%02ld",min,sec];
 }
 
 @end

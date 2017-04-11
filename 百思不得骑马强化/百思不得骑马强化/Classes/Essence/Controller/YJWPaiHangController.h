@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YJWTopicViewController.h"
 
-@interface YJWPaiHangController : UITableViewController
+@interface YJWPaiHangController : YJWTopicViewController
 
 @end

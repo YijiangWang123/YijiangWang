@@ -10,6 +10,8 @@
 @class YJWComment;
 
 typedef NS_ENUM(NSInteger,YJWTopicType){
+    /***  所有类型  ***/
+    YJWTopicTypeAll = 1,
     /***  图片类型  ***/
     YJWTopicTypeImage = 10,
     /***  段子类型  ***/
@@ -50,9 +52,9 @@ typedef NS_ENUM(NSInteger,YJWTopicType){
 /** playcount   */
 @property(nonatomic,strong) NSString *playcount;
 /** videotime   */
-@property(nonatomic,strong) NSString *videotime;
+@property(nonatomic,assign) NSInteger videotime;
 /** voicetime   */
-@property(nonatomic,strong) NSString *voicetime;
+@property(nonatomic,assign) NSInteger voicetime;
 /** image   */
 @property(nonatomic,strong) NSString *image0;
 /** image   */
