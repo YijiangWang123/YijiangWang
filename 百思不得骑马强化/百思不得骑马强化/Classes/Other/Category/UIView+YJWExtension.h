@@ -29,4 +29,8 @@
 /** 最下边   */
 @property(nonatomic,assign) CGFloat yjw_bottom;
 
+
+/** 从xib创建view */
++(instancetype)yjw_viewFromXib;
+
 @end

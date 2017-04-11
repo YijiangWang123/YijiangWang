@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class YJWComment;
 
 typedef NS_ENUM(NSInteger,YJWTopicType){
     /***  图片类型  ***/
@@ -29,6 +30,10 @@ typedef NS_ENUM(NSInteger,YJWTopicType){
 @property(nonatomic,strong) NSString *created_at;
 /** text   */
 @property(nonatomic,strong) NSString *text;
+/** 高度   */
+@property(nonatomic,assign) CGFloat height;
+/** 宽度   */
+@property(nonatomic,assign) CGFloat width;
 
 /** ding   */
 @property(nonatomic,assign) NSInteger ding;
@@ -40,9 +45,30 @@ typedef NS_ENUM(NSInteger,YJWTopicType){
 @property(nonatomic,assign) NSInteger comment;
 
 /** 最热评论   */
-@property(nonatomic,strong) NSArray *top_cmt;
+@property(nonatomic,strong) YJWComment *top_cmt;
+
+/** playcount   */
+@property(nonatomic,strong) NSString *playcount;
+/** videotime   */
+@property(nonatomic,strong) NSString *videotime;
+/** voicetime   */
+@property(nonatomic,strong) NSString *voicetime;
+/** image   */
+@property(nonatomic,strong) NSString *image0;
+/** image   */
+@property(nonatomic,strong) NSString *image1;
+/** image   */
+@property(nonatomic,strong) NSString *image_small;
 
 /** 类型   */
 @property(nonatomic,assign) YJWTopicType type;
+/** 是否是gif   */
+@property(nonatomic,assign) BOOL is_gif;
 
+/** 额外增加的属性，方便开发   */
+@property(nonatomic,assign) CGFloat cellHeight;
+/** 设置控件的frame   */
+@property(nonatomic,assign) CGRect contentF;
+/** 标记是否为超长图片   */
+@property(nonatomic,assign,getter=is_bigImage) BOOL bigImage;
 @end

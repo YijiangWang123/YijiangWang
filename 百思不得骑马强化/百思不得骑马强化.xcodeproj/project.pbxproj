@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0AA8DAFB9D6D8B0CF5D8CDE2 /* libPods-百思不得骑马强化.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFEB65BF6DFE7B5C7845505 /* libPods-百思不得骑马强化.a */; };
+		613E1FC51E9B92680068AEA9 /* YJWPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 613E1FC41E9B92680068AEA9 /* YJWPictureView.m */; };
+		613E1FC81E9B927A0068AEA9 /* YJWAudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 613E1FC71E9B927A0068AEA9 /* YJWAudioView.m */; };
+		613E1FCB1E9B93A50068AEA9 /* YJWAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613E1FCA1E9B93A50068AEA9 /* YJWAudioController.m */; };
+		613E1FCE1E9B93C70068AEA9 /* YJWVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 613E1FCD1E9B93C70068AEA9 /* YJWVideoView.m */; };
+		613E1FD01E9B93D30068AEA9 /* YJWAudioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613E1FCF1E9B93D30068AEA9 /* YJWAudioView.xib */; };
+		613E1FD21E9B93DE0068AEA9 /* YJWPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613E1FD11E9B93DE0068AEA9 /* YJWPictureView.xib */; };
+		613E1FD41E9B93EC0068AEA9 /* YJWVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613E1FD31E9B93EC0068AEA9 /* YJWVideoView.xib */; };
 		616625341E7EBE91005460A8 /* YJWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 616625331E7EBE91005460A8 /* YJWConst.m */; };
 		616625371E7EC4B4005460A8 /* YJWMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 616625361E7EC4B4005460A8 /* YJWMeCell.m */; };
 		6166253A1E7F856A005460A8 /* YJWFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 616625391E7F856A005460A8 /* YJWFooterView.m */; };
@@ -80,6 +87,17 @@
 		0C65B51768A6C59C09342CAD /* Pods-百思不得骑马强化UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得骑马强化UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得骑马强化UITests/Pods-百思不得骑马强化UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0EFEB65BF6DFE7B5C7845505 /* libPods-百思不得骑马强化.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得骑马强化.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		156076910FE246B74B19EC99 /* Pods-百思不得骑马强化UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得骑马强化UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得骑马强化UITests/Pods-百思不得骑马强化UITests.release.xcconfig"; sourceTree = "<group>"; };
+		613E1FC31E9B92680068AEA9 /* YJWPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWPictureView.h; sourceTree = "<group>"; };
+		613E1FC41E9B92680068AEA9 /* YJWPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWPictureView.m; sourceTree = "<group>"; };
+		613E1FC61E9B927A0068AEA9 /* YJWAudioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWAudioView.h; sourceTree = "<group>"; };
+		613E1FC71E9B927A0068AEA9 /* YJWAudioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWAudioView.m; sourceTree = "<group>"; };
+		613E1FC91E9B93A50068AEA9 /* YJWAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWAudioController.h; sourceTree = "<group>"; };
+		613E1FCA1E9B93A50068AEA9 /* YJWAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWAudioController.m; sourceTree = "<group>"; };
+		613E1FCC1E9B93C70068AEA9 /* YJWVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWVideoView.h; sourceTree = "<group>"; };
+		613E1FCD1E9B93C70068AEA9 /* YJWVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWVideoView.m; sourceTree = "<group>"; };
+		613E1FCF1E9B93D30068AEA9 /* YJWAudioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJWAudioView.xib; sourceTree = "<group>"; };
+		613E1FD11E9B93DE0068AEA9 /* YJWPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJWPictureView.xib; sourceTree = "<group>"; };
+		613E1FD31E9B93EC0068AEA9 /* YJWVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJWVideoView.xib; sourceTree = "<group>"; };
 		616625321E7EBE91005460A8 /* YJWConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWConst.h; sourceTree = "<group>"; };
 		616625331E7EBE91005460A8 /* YJWConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWConst.m; sourceTree = "<group>"; };
 		616625351E7EC4B4005460A8 /* YJWMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWMeCell.h; sourceTree = "<group>"; };
@@ -295,6 +313,8 @@
 				61DB39321E838726005F272F /* YJWPictureController.m */,
 				61DB39341E838735005F272F /* YJWWordController.h */,
 				61DB39351E838735005F272F /* YJWWordController.m */,
+				613E1FC91E9B93A50068AEA9 /* YJWAudioController.h */,
+				613E1FCA1E9B93A50068AEA9 /* YJWAudioController.m */,
 				61DB39371E838FC2005F272F /* YJWPaiHangController.h */,
 				61DB39381E838FC2005F272F /* YJWPaiHangController.m */,
 				61DB393A1E838FD3005F272F /* YJWSocietyController.h */,
@@ -330,6 +350,15 @@
 				61F33FCC1E86A98A00E3003A /* YJWTopicCell.h */,
 				61F33FCD1E86A98A00E3003A /* YJWTopicCell.m */,
 				61F33FCE1E86A98A00E3003A /* YJWTopicCell.xib */,
+				613E1FC31E9B92680068AEA9 /* YJWPictureView.h */,
+				613E1FC41E9B92680068AEA9 /* YJWPictureView.m */,
+				613E1FD11E9B93DE0068AEA9 /* YJWPictureView.xib */,
+				613E1FC61E9B927A0068AEA9 /* YJWAudioView.h */,
+				613E1FC71E9B927A0068AEA9 /* YJWAudioView.m */,
+				613E1FCF1E9B93D30068AEA9 /* YJWAudioView.xib */,
+				613E1FCC1E9B93C70068AEA9 /* YJWVideoView.h */,
+				613E1FCD1E9B93C70068AEA9 /* YJWVideoView.m */,
+				613E1FD31E9B93EC0068AEA9 /* YJWVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -636,11 +665,14 @@
 			files = (
 				61734F401E7A51A400A8A037 /* YJWLoginRegisterViewController.xib in Resources */,
 				61DB39271E82AECD005F272F /* YJWSettingOtherCell.xib in Resources */,
+				613E1FD21E9B93DE0068AEA9 /* YJWPictureView.xib in Resources */,
 				61F33FD01E86A98A00E3003A /* YJWTopicCell.xib in Resources */,
+				613E1FD01E9B93D30068AEA9 /* YJWAudioView.xib in Resources */,
 				616A40291DAC8D3500B28F0D /* LaunchScreen.storyboard in Resources */,
 				61ADB4E31E80D24F00758001 /* YJWWebViewController.xib in Resources */,
 				61734F391E7A442B00A8A037 /* YJWFriendViewController.xib in Resources */,
 				616A40261DAC8D3500B28F0D /* Assets.xcassets in Resources */,
+				613E1FD41E9B93EC0068AEA9 /* YJWVideoView.xib in Resources */,
 				616A40241DAC8D3500B28F0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,7 +799,9 @@
 				61EB8A101E8AAC4500533E5B /* NSDate+YJWExtension.m in Sources */,
 				61BE370F1DE83DF2000758C7 /* AppDelegate.m in Sources */,
 				61C930F91E7FDEB2004CEC61 /* YJWSquareButton.m in Sources */,
+				613E1FCE1E9B93C70068AEA9 /* YJWVideoView.m in Sources */,
 				61BE37101DE83DF2000758C7 /* UIView+YJWExtension.m in Sources */,
+				613E1FC81E9B927A0068AEA9 /* YJWAudioView.m in Sources */,
 				616625341E7EBE91005460A8 /* YJWConst.m in Sources */,
 				6166253A1E7F856A005460A8 /* YJWFooterView.m in Sources */,
 				61BE370E1DE83DF2000758C7 /* YJWNewViewController.m in Sources */,
@@ -783,8 +817,10 @@
 				61F33FC01E86195700E3003A /* YJWHeader.m in Sources */,
 				61DB393F1E838FF0005F272F /* YJWBeautyController.m in Sources */,
 				61734F2E1E790AB000A8A037 /* UIBarButtonItem+YJWExtension.m in Sources */,
+				613E1FCB1E9B93A50068AEA9 /* YJWAudioController.m in Sources */,
 				61DB39421E839001005F272F /* YJWGameController.m in Sources */,
 				61DB392A1E837D6F005F272F /* YJWTitleButton.m in Sources */,
+				613E1FC51E9B92680068AEA9 /* YJWPictureView.m in Sources */,
 				61BE370C1DE83DF2000758C7 /* YJWFriendViewController.m in Sources */,
 				61EB8A0D1E8A73DB00533E5B /* NSCalendar+YJWExtension.m in Sources */,
 				61734F341E79733900A8A037 /* YJWRecommendViewController.m in Sources */,
@@ -880,7 +916,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -922,7 +958,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -938,7 +974,6 @@
 				DEVELOPMENT_TEAM = YSSKH42VUK;
 				GCC_PREFIX_HEADER = "百思不得骑马强化/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得骑马强化/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.yijiang.com.--------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -954,7 +989,6 @@
 				DEVELOPMENT_TEAM = YSSKH42VUK;
 				GCC_PREFIX_HEADER = "百思不得骑马强化/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得骑马强化/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.yijiang.com.--------";
 				PRODUCT_NAME = "$(TARGET_NAME)";

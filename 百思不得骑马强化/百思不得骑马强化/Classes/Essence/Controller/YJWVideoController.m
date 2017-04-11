@@ -20,7 +20,7 @@
     self.tableView.backgroundColor = YJWRandomColor;
     
     /***  设置内边距和初始化时内容偏移量  ***/
-    self.tableView.contentInset = UIEdgeInsetsMake(98, 0, 49, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(99, 0, 49, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 
 }

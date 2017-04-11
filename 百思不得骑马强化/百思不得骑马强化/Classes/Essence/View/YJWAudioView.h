@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class YJWTopic;
+
 @interface YJWAudioView : UIView
+
+/** topic   */
+@property(nonatomic,strong)YJWTopic *topic;
 
 @end

@@ -12,6 +12,7 @@ target '百思不得骑马强化' do
   pod 'MJExtension'
   pod 'SVProgressHUD'
   pod 'MJRefresh'
+  pod 'DACircularProgress'
 
   target '百思不得骑马强化UITests' do
     inherit! :search_paths

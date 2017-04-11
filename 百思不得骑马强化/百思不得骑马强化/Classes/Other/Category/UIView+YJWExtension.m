@@ -114,4 +114,10 @@
     return CGRectGetMaxY(self.frame);
 }
 
+/** 从xib创建view */
++(instancetype)yjw_viewFromXib
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+}
+
 @end

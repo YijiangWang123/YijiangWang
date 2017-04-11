@@ -9,6 +9,7 @@
 #import "YJWTopic.h"
 #import <MJExtension.h>
 #import "YJWComment.h"
+#import "YJWUser.h"
 
 @implementation YJWTopic
 
@@ -64,6 +65,49 @@ static NSCalendar *calendar_;
         formatter_.dateFormat = @"yyyy-MM-dd HH:mm";
         return [formatter_ stringFromDate:createdAt];
     }
+}
+
+-(CGFloat)cellHeight
+{
+    //1.头像高度
+    _cellHeight = 50;
+    
+    //2.文字高度
+    CGFloat YJWMargin = 10;
+    CGFloat textWidth = [UIScreen mainScreen].bounds.size.width - 2 * YJWMargin;
+    CGSize textSize = CGSizeMake(textWidth, MAXFLOAT);
+    CGFloat textHeight = [_text boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size.height;
+    _cellHeight += (textHeight + 27);
+    
+    //3.如果不是段子，就需要加入其它控件
+    if (_type != YJWTopicTypeWord) {
+        CGFloat contentHeight = textWidth * _height / _width;
+        
+        //如果是超长图片，就显示部分
+        if (contentHeight >= [UIScreen mainScreen].bounds.size.height) {
+            contentHeight = 200;
+            self.bigImage = YES;
+        }
+        
+        self.contentF = CGRectMake(YJWMargin, _cellHeight, textWidth, contentHeight);
+        
+        _cellHeight += contentHeight + YJWMargin;
+    }
+    
+    //4.热评
+    if (_top_cmt) {
+        //热评标题和三段间距
+        _cellHeight += 12 + 15;
+        //热评内容高度
+        NSString *top_cmtContent = [NSString stringWithFormat:@"%@:%@",_top_cmt.user.username,_top_cmt.content];
+        CGFloat top_cmtHeight = [top_cmtContent boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size.height;
+        _cellHeight += top_cmtHeight;
+    }
+    
+    //5.底部工具条
+    _cellHeight += 35;
+    
+    return _cellHeight;
 }
 
 @end

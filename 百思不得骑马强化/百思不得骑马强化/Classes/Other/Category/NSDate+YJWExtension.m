@@ -19,14 +19,21 @@ static NSCalendar *calendar_;
     calendar_ = [NSCalendar yjw_calendar];
 }
 
+//-(BOOL)isThisYear
+//{
+//    /***  获取当前所在年  ***/
+//    NSInteger currentYear = [calendar_ component:NSCalendarUnitYear fromDate:[NSDate date]];
+//    /***  获取selfYear  ***/
+//    NSInteger selfYear = [calendar_ component:NSCalendarUnitYear fromDate:self];
+//    
+//    return (currentYear == selfYear);
+//}
 -(BOOL)isThisYear
 {
-    /***  获取当前所在年  ***/
     NSInteger currentYear = [calendar_ component:NSCalendarUnitYear fromDate:[NSDate date]];
-    /***  获取selfYear  ***/
     NSInteger selfYear = [calendar_ component:NSCalendarUnitYear fromDate:self];
     
-    return (currentYear == selfYear);
+    return currentYear == selfYear;
 }
 
 #warning iOS8 之前使用这方法

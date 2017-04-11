@@ -19,6 +19,10 @@
     [YJWTopic mj_setupObjectClassInArray:^NSDictionary *{
         return @{@"top_cmt":[YJWComment class]};
     }];
+    
+    [YJWTopic mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{@"top_cmt":@"top_cmt[0]"};
+    }];
 }
 
 @end

@@ -17,7 +17,7 @@
 @interface YJWRecommendController ()
 
 /** topicsArr   */
-@property(nonatomic,strong) NSMutableArray *topicsArr;
+@property(nonatomic,strong) NSMutableArray<YJWTopic *> *topicsArr;
 /** 加载除第一页之外的数据需要的参数   */
 @property(nonatomic,strong) NSString *maxtime;
 /** AFHTTPSessionManager   */
@@ -48,7 +48,7 @@ static NSString *recommendID = @"recomend";
     
     /***  注册cell  ***/
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YJWTopicCell class]) bundle:nil] forCellReuseIdentifier:recommendID];
-    self.tableView.rowHeight = 250;
+//    self.tableView.rowHeight = 250;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self setUpRefresh];
@@ -73,15 +73,25 @@ static NSString *recommendID = @"recomend";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"1";
+    params[@"type"] = @"10";
     
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject){
         /***  获取模型数组  ***/
         self.topicsArr = [YJWTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         /***  给maxtime赋值，以便可以加载第二页  ***/
         self.maxtime = responseObject[@"info"][@"maxtime"];
         //加载数据后，再进行刷新表格
         [self.tableView reloadData];
+        
+        ///写到桌面
+//        [responseObject writeToFile:@"/Users/macbookpro/Desktop/newData.plist" atomically:YES];
+//        for (int i=0; i<self.topicsArr.count; i++) {
+//            YJWTopic *topic = self.topicsArr[i];
+//            if (topic.top_cmt.count) {
+//                NSLog(@"------%d------",i);
+//            }
+//        }
+        
         //停止刷新
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -110,10 +120,24 @@ static NSString *recommendID = @"recomend";
         
         [self.tableView reloadData];
         
+        ///写到桌面
+//        [responseObject writeToFile:@"/Users/macbookpro/Desktop/moreData.plist" atomically:YES];
+//        for (int i=0; i<self.topicsArr.count; i++) {
+//            YJWTopic *topic = self.topicsArr[i];
+//            if (topic.top_cmt.count) {
+//                NSLog(@"------%d------",i);
+//            }
+//        }
+        
         [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_footer endRefreshing];
     }];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.topicsArr[indexPath.row].cellHeight;
 }
 
 #pragma mark - Table view data source
@@ -126,7 +150,7 @@ static NSString *recommendID = @"recomend";
     
     YJWTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendID];
     YJWTopic *topic = self.topicsArr[indexPath.row];
-  
+    
     cell.topic = topic;
     
     return cell;

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class YJWTopic;
 
 @interface YJWVideoView : UIView
+
+/** topic   */
+@property(nonatomic,strong) YJWTopic *topic;
 
 @end
