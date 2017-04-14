@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0AA8DAFB9D6D8B0CF5D8CDE2 /* libPods-百思不得骑马强化.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFEB65BF6DFE7B5C7845505 /* libPods-百思不得骑马强化.a */; };
+		6113D7D11EA0C23B005D2DC1 /* YJWSeeBigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6113D7CF1EA0C23B005D2DC1 /* YJWSeeBigController.m */; };
+		6113D7D21EA0C23B005D2DC1 /* YJWSeeBigController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6113D7D01EA0C23B005D2DC1 /* YJWSeeBigController.xib */; };
 		613E1FC51E9B92680068AEA9 /* YJWPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 613E1FC41E9B92680068AEA9 /* YJWPictureView.m */; };
 		613E1FC81E9B927A0068AEA9 /* YJWAudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 613E1FC71E9B927A0068AEA9 /* YJWAudioView.m */; };
 		613E1FCB1E9B93A50068AEA9 /* YJWAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613E1FCA1E9B93A50068AEA9 /* YJWAudioController.m */; };
@@ -88,6 +90,9 @@
 		0C65B51768A6C59C09342CAD /* Pods-百思不得骑马强化UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得骑马强化UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得骑马强化UITests/Pods-百思不得骑马强化UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0EFEB65BF6DFE7B5C7845505 /* libPods-百思不得骑马强化.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得骑马强化.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		156076910FE246B74B19EC99 /* Pods-百思不得骑马强化UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得骑马强化UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得骑马强化UITests/Pods-百思不得骑马强化UITests.release.xcconfig"; sourceTree = "<group>"; };
+		6113D7CE1EA0C23B005D2DC1 /* YJWSeeBigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWSeeBigController.h; sourceTree = "<group>"; };
+		6113D7CF1EA0C23B005D2DC1 /* YJWSeeBigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWSeeBigController.m; sourceTree = "<group>"; };
+		6113D7D01EA0C23B005D2DC1 /* YJWSeeBigController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJWSeeBigController.xib; sourceTree = "<group>"; };
 		613E1FC31E9B92680068AEA9 /* YJWPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWPictureView.h; sourceTree = "<group>"; };
 		613E1FC41E9B92680068AEA9 /* YJWPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWPictureView.m; sourceTree = "<group>"; };
 		613E1FC61E9B927A0068AEA9 /* YJWAudioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWAudioView.h; sourceTree = "<group>"; };
@@ -330,6 +335,9 @@
 				61DB39441E839011005F272F /* YJWNetHotController.m */,
 				614402431E9CF4D900696DB3 /* YJWTopicViewController.h */,
 				614402441E9CF4D900696DB3 /* YJWTopicViewController.m */,
+				6113D7CE1EA0C23B005D2DC1 /* YJWSeeBigController.h */,
+				6113D7CF1EA0C23B005D2DC1 /* YJWSeeBigController.m */,
+				6113D7D01EA0C23B005D2DC1 /* YJWSeeBigController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -673,6 +681,7 @@
 				613E1FD21E9B93DE0068AEA9 /* YJWPictureView.xib in Resources */,
 				61F33FD01E86A98A00E3003A /* YJWTopicCell.xib in Resources */,
 				613E1FD01E9B93D30068AEA9 /* YJWAudioView.xib in Resources */,
+				6113D7D21EA0C23B005D2DC1 /* YJWSeeBigController.xib in Resources */,
 				616A40291DAC8D3500B28F0D /* LaunchScreen.storyboard in Resources */,
 				61ADB4E31E80D24F00758001 /* YJWWebViewController.xib in Resources */,
 				61734F391E7A442B00A8A037 /* YJWFriendViewController.xib in Resources */,
@@ -794,6 +803,7 @@
 				61DB39361E838735005F272F /* YJWWordController.m in Sources */,
 				61C930F61E7FC8A5004CEC61 /* YJWMeSquare.m in Sources */,
 				61F33FC31E86197A00E3003A /* YJWFooter.m in Sources */,
+				6113D7D11EA0C23B005D2DC1 /* YJWSeeBigController.m in Sources */,
 				61ADB4E21E80D24F00758001 /* YJWWebViewController.m in Sources */,
 				61BE370B1DE83DF2000758C7 /* YJWEssenceViewController.m in Sources */,
 				61DB391F1E8203D4005F272F /* NSString+YJWExtension.m in Sources */,

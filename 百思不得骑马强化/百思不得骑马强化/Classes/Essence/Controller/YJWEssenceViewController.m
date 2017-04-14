@@ -13,7 +13,7 @@
 #import "YJWVideoController.h"
 #import "YJWPictureController.h"
 #import "YJWWordController.h"
-#import "YJWPaiHangController.h"
+#import "YJWAudioController.h"
 #import "YJWSocietyController.h"
 #import "YJWBeautyController.h"
 #import "YJWGameController.h"
@@ -63,8 +63,8 @@
     YJWWordController *wordVC = [[YJWWordController alloc] init];
     [self addChildViewController:wordVC];
     
-    YJWPaiHangController *paihangVC = [[YJWPaiHangController alloc] init];
-    [self addChildViewController:paihangVC];
+    YJWAudioController *audioVC = [[YJWAudioController alloc] init];
+    [self addChildViewController:audioVC];
     
     YJWSocietyController *societyVC = [[YJWSocietyController alloc] init];
     [self addChildViewController:societyVC];

@@ -29,6 +29,7 @@
 //实现此方法，只是为了消除警告
 -(YJWTopicType)type
 {
+    //默认显示全部内容
     return YJWTopicTypeAll;
 }
 

@@ -10,6 +10,7 @@
 #import "YJWTopic.h"
 #import <UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
+#import "YJWSeeBigController.h"
 
 @interface YJWPictureView ()
 
@@ -29,6 +30,17 @@
     
     self.progressView.roundedCorners = 5;
     self.progressView.progressLabel.textColor = [UIColor whiteColor];
+    
+    self.picImageV.userInteractionEnabled = YES;
+    [self.picImageV addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBig)]];
+}
+
+-(void)seeBig
+{
+    YJWSeeBigController *seeBigVC = [[YJWSeeBigController alloc] init];
+    seeBigVC.topic = self.topic;
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBigVC animated:YES completion:nil];
 }
 
 -(void)setTopic:(YJWTopic *)topic
