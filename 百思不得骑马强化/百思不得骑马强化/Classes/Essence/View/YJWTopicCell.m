@@ -86,7 +86,8 @@
     
     [self.profile_imageV sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.nameLabel.text = topic.name;
-    self.created_atLabel.text = topic.created_at;
+
+//    self.created_atLabel.text = topic.created_at;
     self.text_Label.text = topic.text;
     
     [self setUpBtn:self.dingBtn number:topic.ding placeHolder:@"顶"];

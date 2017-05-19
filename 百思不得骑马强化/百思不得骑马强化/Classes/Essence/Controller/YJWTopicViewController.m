@@ -88,16 +88,7 @@ static NSString *recommendID = @"recomend";
         self.maxtime = responseObject[@"info"][@"maxtime"];
         //加载数据后，再进行刷新表格
         [self.tableView reloadData];
-        
-        ///写到桌面
-        //        [responseObject writeToFile:@"/Users/macbookpro/Desktop/newData.plist" atomically:YES];
-        //        for (int i=0; i<self.topicsArr.count; i++) {
-        //            YJWTopic *topic = self.topicsArr[i];
-        //            if (topic.top_cmt.count) {
-        //                NSLog(@"------%d------",i);
-        //            }
-        //        }
-        
+                
         //停止刷新
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

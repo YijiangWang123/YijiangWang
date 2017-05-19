@@ -97,7 +97,7 @@ static NSCalendar *calendar_;
     //4.热评
     if (_top_cmt) {
         //热评标题和三段间距
-        _cellHeight += 12 + 15;
+        _cellHeight += 15;
         //热评内容高度
         NSString *top_cmtContent = [NSString stringWithFormat:@"%@:%@",_top_cmt.user.username,_top_cmt.content];
         CGFloat top_cmtHeight = [top_cmtContent boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size.height;

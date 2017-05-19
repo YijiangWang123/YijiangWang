@@ -84,7 +84,7 @@
 {
     /***  添加滚动视图  ***/
     UIScrollView *titleView = [[UIScrollView alloc] init];
-    titleView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.3];
+    titleView.backgroundColor = YJWColorA(0, 0, 0, 0.2);
     [self.view addSubview:titleView];
     self.titleView = titleView;
     titleView.yjw_x = 0;

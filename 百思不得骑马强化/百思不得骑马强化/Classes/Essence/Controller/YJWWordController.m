@@ -7,8 +7,11 @@
 //
 
 #import "YJWWordController.h"
+#import <objc/message.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @interface YJWWordController ()
+
 
 @end
 
@@ -16,7 +19,24 @@
 
 -(YJWTopicType)type
 {
+    [self numberWithProblems:4 distance:210];
     return YJWTopicTypeWord;
 }
 
+-(NSInteger)numberWithProblems:(NSInteger)n distance:(NSInteger)m{
+  
+    NSInteger total = 240;
+    NSInteger solvedProblem = 0;
+    
+    for (int i=1; i<=n; i++) {
+        if (total >= (i*(i+1)*5/2+m)) {
+            solvedProblem += 1;
+        }
+    }
+    NSLog(@"%zd",solvedProblem);
+    
+    return solvedProblem;
+}
+
 @end
+NS_ASSUME_NONNULL_END
