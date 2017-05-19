@@ -78,12 +78,10 @@ static NSString *YJWAssetCollectionTitle = @"你来咬我呀";
     PHAuthorizationStatus authorizationStatus = [PHPhotoLibrary authorizationStatus];
     switch (authorizationStatus) {
         case PHAuthorizationStatusRestricted:
-            YJWLog(@"系统权限问题，保存失败");
-            [SVProgressHUD showErrorWithStatus:@"系统权限问题，保存失败"];
+            [self showErrorWithText:@"系统权限问题，保存失败"];
             break;
         case PHAuthorizationStatusDenied:
-            YJWLog(@"设置->隐私->相册中更改权限");
-            [SVProgressHUD showErrorWithStatus:@"设置->隐私->相册中更改权限"];
+            [self showErrorWithText:@"设置->隐私->相册中更改权限"];
             break;
         case PHAuthorizationStatusAuthorized:
             //保存图片
@@ -96,7 +94,7 @@ static NSString *YJWAssetCollectionTitle = @"你来咬我呀";
                     //保存图片
                     [self saveImage];
                 }else{
-                    [SVProgressHUD showErrorWithStatus:@"没有权限访问相册"];
+                    [self showErrorWithText:@"没有权限访问相册"];
                 }
             }];
             break;
@@ -108,8 +106,6 @@ static NSString *YJWAssetCollectionTitle = @"你来咬我呀";
     //2.创建一个相册
     //3.将刚刚添加到相机胶卷中的图片添加到创建的相册中
     
-    ///PHAssetCollection的标识，利用这个这个标识可以找到对应的PHAssetCollection对象（相册对象）
-    __block NSString *assetCollectionsWithLocalIdentifier = nil;
     ///PHAsset的标识, 利用这个标识可以找到对应的PHAsset对象(图片对象)
     __block NSString *assetsWithLocalIdentifier = nil;
     
@@ -118,68 +114,33 @@ static NSString *YJWAssetCollectionTitle = @"你来咬我呀";
         assetsWithLocalIdentifier = [PHAssetCreationRequest creationRequestForAssetFromImage:self.imgV.image].placeholderForCreatedAsset.localIdentifier;
     } completionHandler:^(BOOL success, NSError * _Nullable error) {
         if (success == NO) {
-            YJWLog(@"保存图片到相机胶卷中失败");
-            [SVProgressHUD showErrorWithStatus:@"保存图片到相机胶卷中失败"];
+            [self showErrorWithText:@"保存图片到相机胶卷中失败"];
             return;
         }
         
-        //2.创建一个相册，首先判断相册是否已经存在
+        //2.获得相册
         PHAssetCollection *createdAssetCollection = [self createdAssetCollection];
-        if (createdAssetCollection) {
-            //相册已存在，直接将图片添加到相册中
-            [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-                //获取图片
-                PHAsset *asset = [PHAsset fetchAssetsWithLocalIdentifiers:@[assetsWithLocalIdentifier] options:nil].lastObject;
-                
-                ///将图片添加到相册中的请求
-                PHAssetCollectionChangeRequest *request = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:createdAssetCollection];
-                ///添加图片到相册
-                [request addAssets:@[asset]];
-            } completionHandler:^(BOOL success, NSError * _Nullable error) {
-                if (success == NO) {
-                    YJWLog(@"添加图片到自定义相册中失败");
-                    [SVProgressHUD showErrorWithStatus:@"添加图片到自定义相册中失败"];
-                }else{
-                    YJWLog(@"添加图片到自定义相册中成功");
-                    [SVProgressHUD showSuccessWithStatus:@"添加图片到自定义相册中成功"];
-                }
-            }];
-        }else{
-            [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-                ///创建相册
-                assetCollectionsWithLocalIdentifier = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:YJWAssetCollectionTitle].placeholderForCreatedAssetCollection.localIdentifier;
-            } completionHandler:^(BOOL success, NSError * _Nullable error) {
-                if (success == NO) {
-                    YJWLog(@"创建自定义相册失败");
-                    [SVProgressHUD showErrorWithStatus:@"创建自定义相册失败"];
-                    return;
-                }
-                
-                //3.将刚刚添加到相机胶卷中的图片添加到创建的相册中
-                [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-                    //获取相册
-                    PHAssetCollection *assetCollection = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[assetCollectionsWithLocalIdentifier] options:nil].lastObject;
-                    //获取图片
-                    PHAsset *asset = [PHAsset fetchAssetsWithLocalIdentifiers:@[assetsWithLocalIdentifier] options:nil].lastObject;
-                    
-                    ///将图片添加到相册中的请求
-                    PHAssetCollectionChangeRequest *request = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:assetCollection];
-                    ///添加图片到相册
-                    [request addAssets:@[asset]];
-                } completionHandler:^(BOOL success, NSError * _Nullable error) {
-                    if (success == NO) {
-                        YJWLog(@"添加图片到自定义相册中失败");
-                        [SVProgressHUD showErrorWithStatus:@"添加图片到自定义相册中失败"];
-                    }else{
-                        YJWLog(@"添加图片到自定义相册中成功");
-                        [SVProgressHUD showSuccessWithStatus:@"添加图片到自定义相册中成功"];
-                    }
-                }];
-            }];
-        }
+        
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            
+            //获取图片
+            PHAsset *asset = [PHAsset fetchAssetsWithLocalIdentifiers:@[assetsWithLocalIdentifier] options:nil].lastObject;
+            
+            ///将图片添加到相册中的请求
+            PHAssetCollectionChangeRequest *request = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:createdAssetCollection];
+            ///添加图片到相册
+            [request addAssets:@[asset]];
+        } completionHandler:^(BOOL success, NSError * _Nullable error){
+            if (success == NO) {
+                [self showErrorWithText:@"添加图片到自定义相册中失败"];
+            }else{
+                [self showSuccessWithText:@"添加图片到自定义相册中成功"];
+            }
+        }];
     }];
 }
-///这里需要获取曾经创建过的相册，否则每次保存图片时候都会创建一个新相册
+
+///这里需要获取曾经创建过的相册，如果没有对应的相册就重新创建一个
 -(PHAssetCollection *)createdAssetCollection
 {
     ///获取所有相册
@@ -191,7 +152,33 @@ static NSString *YJWAssetCollectionTitle = @"你来咬我呀";
             return assetCollection;
         }
     }
-    return nil;
+    
+    ///如果没有找对对应的相册，就重新创建一个
+    ///PHAssetCollection的标识，利用这个这个标识可以找到对应的PHAssetCollection对象（相册对象）
+    __block NSString *assetCollectionsWithLocalIdentifier = nil;
+    ///错误信息
+    NSError *error = nil;
+    ///创建相册
+    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+        assetCollectionsWithLocalIdentifier = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:YJWAssetCollectionTitle].placeholderForCreatedAssetCollection.localIdentifier;
+    } error:&error];
+    //提示是否成功
+    if (error) {
+        [SVProgressHUD showErrorWithStatus:@"创建相册失败"];
+    }else{
+        [SVProgressHUD showSuccessWithStatus:@"创建相册成功"];
+    }
+    //获取相册并返回
+    PHAssetCollection *assetCollection = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[assetCollectionsWithLocalIdentifier] options:nil].lastObject;
+    
+    return assetCollection;
+}
+
+-(void)showSuccessWithText:(NSString *)text{
+    [SVProgressHUD showSuccessWithStatus:text];
+}
+-(void)showErrorWithText:(NSString *)text{
+    [SVProgressHUD showErrorWithStatus:text];
 }
 
 - (IBAction)back:(id)sender {
